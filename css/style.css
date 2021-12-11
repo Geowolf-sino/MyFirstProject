@@ -1,5 +1,5 @@
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserat", sans-serif;
   font-size: 15px;
   line-height: 1.6;
   color: #333;
@@ -247,7 +247,7 @@ hr {
 /* Section */
 
 .section {
-  padding: 80px 0;
+  padding: 40px 0;
 }
 .section--devices {
   padding-bottom: 0;
