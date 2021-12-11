@@ -86,10 +86,39 @@ $(function () {
 
 /*********************************************************** */
 
-let deleteSlides = document.querySelectorAll('.section__header ');
+const movieDB = {
+    movies: [
+        "NARUTO",
+        "BLEACH",
+        "JUJUTSU KAISEN",
+        "OVERLORD",
+        "SAO ALICIZATION"
+    ]
+}
+
+
+let deleteSlides = document.querySelectorAll('#slides'),
+    introBg = document.querySelector('.intro'),
+    titleText = document.querySelector('.intro__title'),
+    animeList = document.querySelector('.promo__interactive-list');
 
 deleteSlides.forEach(item => {
     item.remove();
+});
+
+titleText.textContent = 'My ANIME Fans';
+
+introBg.style.backgroundImage = 'url("../image/bg.jpg")';
+
+animeList.innerHTML = "";
+
+movieDB.movies.sort();
+movieDB.movies.forEach((anime, i) => {
+    animeList.innerHTML += `
+    <li class="promo__interactive-item">${i + 1}. ${anime}
+                            <div class="delete"></div>
+                            </li>
+    `;
 });
 
 
