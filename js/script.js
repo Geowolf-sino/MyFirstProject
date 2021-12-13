@@ -105,8 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         animeList = document.querySelector('.promo__interactive-list'),
         addForm = document.querySelector('form.add'),
         addInput = addForm.querySelector('.adding__input'),
-        checkbox = addForm.querySelector('[type="checkbox"]'),
-        chekFavorite = document.querySelectorAll('.promo__interactive-item');
+        checkbox = addForm.querySelector('[type="checkbox"]');
 
 
     addForm.addEventListener('submit', (event) => {
@@ -121,12 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (favorite) {
-                let myFavorite = (fav) => {
-                    fav.forEach(item => {
-                        item.style.backgroundColor = 'red';
-                    });
-                }
-                myFavorite(animeList, chekFavorite);
+                console.log('My favorite ANIME');
             }
             movieDB.movies.push(newAnime.toUpperCase());
             sortArr(movieDB.movies);
